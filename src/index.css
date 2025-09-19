@@ -3,3 +3,19 @@ header{
   padding: 15px;
   color: white;
 }
+
+.movie-card{
+  position: relative;
+  border: 3px, solid, blueviolet;
+}
+
+img{
+  width: 100%;
+  object-fit: contain;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+  
