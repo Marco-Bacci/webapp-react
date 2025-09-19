@@ -6,7 +6,7 @@ header{
 
 .movie-card{
   position: relative;
-  border: 3px, solid, blueviolet;
+  border: 3px, solid, rgb(123, 18, 221);
 }
 
 img{
@@ -17,5 +17,10 @@ img{
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  opacity: 0.8;
 }
   
