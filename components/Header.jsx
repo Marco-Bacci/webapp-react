@@ -1,9 +1,9 @@
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <h1>Movieteca</h1>
-    </div>
+    </header>
   )
 }
 
