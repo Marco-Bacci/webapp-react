@@ -1,4 +1,21 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 const Homepage = () => {
+  const [movies, setMovies] = useState([]);
+
+  const fetchMovies = () => {
+    axios
+      .get("http://localhost:3000/movies")
+      .then((resp) => {
+        setMovies(resp.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(fetchMovies, []);
+
   return (
     <div className="container">
       <div className="row gy-4">
@@ -11,7 +28,6 @@ const Homepage = () => {
             <div className="overlay"></div>
           </div>
         </div>
-        
       </div>
     </div>
   );
