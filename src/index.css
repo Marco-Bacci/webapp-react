@@ -4,6 +4,10 @@ header {
   color: white;
 }
 
+.c-violet{
+  color: blueviolet;
+}
+
 .movie-card {
   height: 450px;
   position: relative;
