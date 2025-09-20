@@ -23,7 +23,7 @@ const Homepage = () => {
         <div className="col-12">
           <h2 className="text-center my-3">Homepage</h2>
         </div>
-        <div className="row gy-4">
+        <div className="row gy-4 my-4">
           {movies.map((movie) => {
             return (
               <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
