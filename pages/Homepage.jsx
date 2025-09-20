@@ -28,12 +28,14 @@ const Homepage = () => {
             return (
               <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
                 <div className="movie-card">
-                  <img src={movie.image} alt="movie" />
+                  <img src={`./imgs/${movie.image}`} alt="movie" />
                   <div className="overlay">
                     <h2>{movie.title}</h2>
                     <p>{movie.director}</p>
-                    <p>{movie.genre}</p>
-                    <p>{movie.release_year}</p>
+                    <p>
+                      genre:{movie.genre} year:{movie.release_year}
+                    </p>
+                    <p>{movie.abstract}</p>
                   </div>
                 </div>
               </div>
