@@ -1,0 +1,10 @@
+const ReviewCard = ({review}) => {
+  return (
+    <div className="review-card my-3">
+      <h3>{review.name}</h3>
+      <p>{review.text}</p>
+    </div>
+  );
+};
+
+export default ReviewCard;

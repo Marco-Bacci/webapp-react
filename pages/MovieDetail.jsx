@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import ReviewCard from "../components/ReviewCard"
+
+
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
@@ -38,10 +41,7 @@ const MovieDetail = () => {
               {movie.reviews &&
                 movie.reviews.map((review) => {
                   return (
-                    <div className="review-card my-3">
-                      <h3>{review.name}</h3>
-                      <p>{review.text}</p>
-                    </div>
+                    <ReviewCard review = {review} key = {review.id}/>
                   );
                 })}
             </div>
