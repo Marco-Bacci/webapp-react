@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import ReviewCard from "../components/ReviewCard"
 
@@ -9,6 +10,8 @@ const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
 
+  const navigate = useNavigate()
+
   const fetchMovie = () => {
     axios
       .get(`http://localhost:3000/movies/${id}`)
@@ -16,7 +19,7 @@ const MovieDetail = () => {
         console.log(resp.data);
         setMovie(resp.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => navigate("Not-Found", {replace:true}));
   };
 
   useEffect(fetchMovie, []);
