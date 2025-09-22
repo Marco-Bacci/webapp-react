@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
-  const { image, title, director, release_year, abstract } = movie;
+  const { id, image, title, director, release_year, abstract } = movie;
   return (
-    <Link to = "http://localhost:5173/movies/:id">
+    <Link to={`/movies/${id}`}>
       <div className="movie-card">
-        <img src={`./imgs/${image}`} alt="movie" />
+        <img src={`/imgs/${image}`} alt="movie" />
         <div className="overlay text-center p-3">
           <h2>{title}</h2>
           <p>{director}</p>

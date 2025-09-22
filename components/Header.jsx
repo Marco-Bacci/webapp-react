@@ -3,6 +3,7 @@ const Header = () => {
   return (
     <header>
       <h1>Movieteca</h1>
+
     </header>
   )
 }
