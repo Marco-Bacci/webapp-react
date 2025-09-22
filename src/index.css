@@ -4,8 +4,7 @@ header {
   color: white;
 }
 
-header .home{
-  color: white;
+.home{
   text-decoration: none;
   padding: 10px;
   font-size: 2em;
