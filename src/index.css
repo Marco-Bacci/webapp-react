@@ -9,6 +9,10 @@ header {
   padding: 10px;
   font-size: 2em;
 }
+
+.logo img{
+  width: 60px;
+}
 .c-violet{
   color: blueviolet;
 }
