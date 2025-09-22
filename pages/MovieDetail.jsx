@@ -25,8 +25,20 @@ const MovieDetail = () => {
         </div>
         <div className="row">
           <div className="col-12">
+            <div className="detail-card">
+              <img src={`/imgs/${movie.image}`} alt="" />
+              <div className="detail-card-description ms-3">
+                <h2>{movie.title}</h2>
+                <p>
+                  Genre: {movie.genre} 
+                </p>
+                <p>
+                  Year: {movie.release_year} 
 
-
+                </p>
+                <p>{movie.abstract}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
