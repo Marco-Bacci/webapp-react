@@ -29,15 +29,21 @@ const MovieDetail = () => {
               <img src={`/imgs/${movie.image}`} alt="" />
               <div className="detail-card-description ms-3">
                 <h2>{movie.title}</h2>
-                <p>
-                  Genre: {movie.genre} 
-                </p>
-                <p>
-                  Year: {movie.release_year} 
-
-                </p>
+                <p>Genre: {movie.genre}</p>
+                <p>Year: {movie.release_year}</p>
                 <p>{movie.abstract}</p>
               </div>
+            </div>
+            <div className="reviews">
+              {movie.reviews &&
+                movie.reviews.map((review) => {
+                  return (
+                    <div className="review-card my-3">
+                      <h3>{review.name}</h3>
+                      <p>{review.text}</p>
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>

@@ -61,4 +61,10 @@ img {
   padding: 20px;
   border-radius: 10px;
 }
-  
+
+.review-card{
+  background-color: blueviolet;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
