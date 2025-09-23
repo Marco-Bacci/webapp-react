@@ -44,7 +44,7 @@ const MovieDetail = () => {
                 movie.reviews.map((review) => {
                   return <ReviewCard review={review} key={review.id} />;
                 })}
-              <ReviewForm />
+              <ReviewForm bookId = {id}/>
             </div>
           </div>
         </div>

@@ -1,10 +1,19 @@
-const ReviewForm = () => {
+import axios from "axios";
+import { useState } from "react";
+const ReviewForm = ({ bookId }) => {
+  const apiUrl = `http://localhost:3000/movies/${bookId}review`;
+
+  const [formData, setFormData] = useState({
+    text:"",
+    vote:"",
+    name:""
+  })
   return (
     <div className="container">
-      <h3 className="mb-4 text-center c-violet">Aggiungi una recensione</h3>
+      <h3 className="mb-4 text-center">Aggiungi una recensione</h3>
       <form>
-        <div className="row gy-3">
-          <div className="col-12 col-md-6 bg-violet p-3 text-light rounded">
+        <div className="row bg-violet rounded p-3">
+          <div className="col-12 col-md-6  text-light rounded">
             <label htmlFor="name" className="form-label">
               Nome
             </label>
@@ -14,10 +23,11 @@ const ReviewForm = () => {
               placeholder="Inserisci il tuo nome"
               name="name"
               id="name"
+              value={formData.name}
             />
           </div>
 
-          <div className="col-12 col-md-6 bg-violet p-3 text-light rounded">
+          <div className="col-12 col-md-6 text-light rounded">
             <label htmlFor="vote" className="form-label">
               Voto
             </label>
@@ -32,7 +42,7 @@ const ReviewForm = () => {
             />
           </div>
 
-          <div className="col-12 bg-violet p-3 text-light rounded">
+          <div className="col-12 text-light rounded">
             <label htmlFor="text" className="form-label">
               Testo recensione
             </label>
@@ -42,6 +52,7 @@ const ReviewForm = () => {
               name="text"
               id="text"
               rows="4"
+              value={formData.text}
             ></textarea>
           </div>
 
