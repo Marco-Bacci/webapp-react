@@ -4,6 +4,8 @@ import DefaultLayout from "../layout/DefaultLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 
+
+
 function App() {
   return (
     <>
@@ -12,6 +14,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />}/>
             <Route path="/movies/:id" element={<MovieDetail/>}/>
+           
             <Route path ="*" element = {<NotFound/>}/>
           </Route>
         </Routes>

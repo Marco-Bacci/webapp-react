@@ -2,15 +2,14 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-import ReviewCard from "../components/ReviewCard"
-
+import ReviewCard from "../components/ReviewCard";
+import ReviewForm from "../components/ReviewForm";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const fetchMovie = () => {
     axios
@@ -19,7 +18,7 @@ const MovieDetail = () => {
         console.log(resp.data);
         setMovie(resp.data);
       })
-      .catch((err) => navigate("Not-Found", {replace:true}));
+      .catch((err) => navigate("Not-Found", { replace: true }));
   };
 
   useEffect(fetchMovie, []);
@@ -43,10 +42,9 @@ const MovieDetail = () => {
             <div className="reviews">
               {movie.reviews &&
                 movie.reviews.map((review) => {
-                  return (
-                    <ReviewCard review = {review} key = {review.id}/>
-                  );
+                  return <ReviewCard review={review} key={review.id} />;
                 })}
+              <ReviewForm />
             </div>
           </div>
         </div>
