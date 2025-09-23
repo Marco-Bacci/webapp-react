@@ -1,10 +1,10 @@
 const ReviewForm = () => {
   return (
     <div className="container">
-      <h3 className="mb-4">Aggiungi una recensione</h3>
+      <h3 className="mb-4 text-center c-violet">Aggiungi una recensione</h3>
       <form>
         <div className="row gy-3">
-          <div className="col-12">
+          <div className="col-12 col-md-6 bg-violet p-3 text-light rounded">
             <label htmlFor="name" className="form-label">
               Nome
             </label>
@@ -17,7 +17,7 @@ const ReviewForm = () => {
             />
           </div>
 
-          <div className="col-12">
+          <div className="col-12 col-md-6 bg-violet p-3 text-light rounded">
             <label htmlFor="vote" className="form-label">
               Voto
             </label>
@@ -32,7 +32,7 @@ const ReviewForm = () => {
             />
           </div>
 
-          <div className="col-12">
+          <div className="col-12 bg-violet p-3 text-light rounded">
             <label htmlFor="text" className="form-label">
               Testo recensione
             </label>
@@ -46,7 +46,7 @@ const ReviewForm = () => {
           </div>
 
           <div className="col-12">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary mb-4">
               Invia
             </button>
           </div>
