@@ -27,7 +27,7 @@ const Homepage = () => {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h2 className="text-center my-3 c-violet fw-bold">Homepage</h2>
+          <h2 className="text-center my-3 text-light fw-bold">Homepage</h2>
         </div>
         <div className="row gy-4 my-4">
           {movies.map((movie) => {

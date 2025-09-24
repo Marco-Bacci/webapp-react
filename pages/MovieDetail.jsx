@@ -1,26 +1,27 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect, useContext} from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { useNavigate,} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ReviewCard from "../components/ReviewCard";
 import ReviewForm from "../components/ReviewForm";
 import GlobalContext from "../src/contexts/GlobalContext";
 
+
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const {setIsLoading} = useContext(GlobalContext)
+  const { setIsLoading } = useContext(GlobalContext);
 
   const navigate = useNavigate();
 
   const fetchMovie = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     axios
       .get(`http://localhost:3000/movies/${id}`)
       .then((resp) => {
         console.log(resp.data);
         setMovie(resp.data);
-        setIsLoading(false)
+        setIsLoading(false);
       })
       .catch((err) => navigate("Not-Found", { replace: true }));
   };
@@ -30,7 +31,7 @@ const MovieDetail = () => {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h2 className="text-center my-3 c-violet fw-bold">Movie Detail</h2>
+          <h2 className="text-center my-3 text-light fw-bold">Movie Detail</h2>
         </div>
         <div className="row">
           <div className="col-12">
@@ -48,7 +49,7 @@ const MovieDetail = () => {
                 movie.reviews.map((review) => {
                   return <ReviewCard review={review} key={review.id} />;
                 })}
-              <ReviewForm bookId = {id}/>
+              <ReviewForm bookId={id} />
             </div>
           </div>
         </div>

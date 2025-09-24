@@ -4,7 +4,9 @@ const ReviewCard = ({review}) => {
       <h3>{review.name}</h3>
       <p>voto: {review.vote}</p>
       <p>{review.text}</p>
+      
     </div>
+    
   );
 };
 

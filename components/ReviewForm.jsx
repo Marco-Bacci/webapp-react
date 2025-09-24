@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const ReviewForm = ({ bookId }) => {
   const apiUrl = `http://localhost:3000/movies/${bookId}/review`;
 
@@ -18,7 +19,6 @@ const ReviewForm = ({ bookId }) => {
     setFormData(obj);
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -34,12 +34,16 @@ const ReviewForm = ({ bookId }) => {
       });
   };
 
-  
   return (
     <div className="container">
-      <h3 className="mb-4 text-center c-violet">Aggiungi una recensione</h3>
+      <div className="d-flex justify-content-between align-items-center">
+        <h3 className="text-center text-light">Aggiungi una recensione</h3>
+        <Link className="home text-light ms-4" to="/">
+          <i className="fa-solid fa-house-chimney"></i>
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div className="row bg-violet rounded p-3">
+        <div className="row bg-violet rounded p-3 mb-4">
           <div className="col-12 col-md-6  text-light rounded">
             <label htmlFor="name" className="form-label">
               Nome
@@ -87,8 +91,8 @@ const ReviewForm = ({ bookId }) => {
             ></textarea>
           </div>
 
-          <div className="col-12">
-            <button type="submit" className="btn btn-primary mb-4">
+          <div className="col-12 text-center">
+            <button type="submit" className="btn btn-outline-light mt-4 ">
               Invia
             </button>
           </div>

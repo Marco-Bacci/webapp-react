@@ -1,31 +1,42 @@
 header {
-  background-color: blueviolet;
+  background-color: rgb(37, 1, 71);
   padding: 15px;
   color: white;
 }
 
-.home{
+main {
+  /* background-color: blueviolet; */
+  background-image: linear-gradient(
+    to top,
+    rgb(146, 70, 218),
+    rgb(74, 12, 131)
+  );
+  font-family: roboto, "sans serif";
+}
+
+.home {
   text-decoration: none;
   padding: 10px;
   font-size: 2em;
 }
 
-.logo img{
+.logo img {
   width: 60px;
 }
-.c-violet{
-  color: blueviolet;
+.c-violet {
+  color: rgb(37, 1, 71);
 }
 
-.bg-violet{
-  background-color: blueviolet;
+.bg-violet {
+  background-color: rgb(37, 1, 71);
 }
 
 .movie-card {
   height: 450px;
   position: relative;
-  border: 3px, solid, rgb(123, 18, 221);
+  border: 3px, solid, rgb(37, 1, 71);
   overflow: hidden;
+  box-shadow: 5px 5px 15px black;
 }
 
 img {
@@ -39,7 +50,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: blueviolet;
+  background-color: rgb(37, 1, 71);
   color: white;
   opacity: 0;
   transition: 1s;
@@ -50,30 +61,30 @@ img {
   cursor: pointer;
 }
 
-
-.detail-card img{
+.detail-card img {
   width: 300px;
 }
 
-.detail-card{
+.detail-card {
   display: flex;
   justify-content: center;
   margin: 50px 0px;
-  background-color: blueviolet;
+  background-color: rgb(37, 1, 71);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px black;
+}
+
+.review-card {
+  background-color: rgb(37, 1, 71);
   color: #fff;
   padding: 20px;
   border-radius: 10px;
 }
 
-.review-card{
-  background-color: blueviolet;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.loader-overlay{
-  position:fixed;
+.loader-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -82,11 +93,10 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.6)
-  ;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.loader-overlay .spinner-border{
+.loader-overlay .spinner-border {
   width: 200px;
   height: 200px;
   color: blueviolet;
