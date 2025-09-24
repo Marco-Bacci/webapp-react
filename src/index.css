@@ -71,3 +71,24 @@ img {
   padding: 20px;
   border-radius: 10px;
 }
+
+.loader-overlay{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6)
+  ;
+}
+
+.loader-overlay .spinner-border{
+  width: 200px;
+  height: 200px;
+  color: blueviolet;
+  font-size: 80px;
+}

@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
+import Loader from "../components/Loader"
+
+
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
 
@@ -20,6 +23,7 @@ const Homepage = () => {
 
   return (
     <div className="container">
+      <Loader/>
       <div className="row">
         <div className="col-12">
           <h2 className="text-center my-3 c-violet fw-bold">Homepage</h2>
