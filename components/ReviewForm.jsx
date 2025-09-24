@@ -8,7 +8,7 @@ const ReviewForm = ({ bookId }) => {
     vote: "",
     name: "",
   });
-
+  
   const setFieldValue = (e) => {
     const { name, value } = e.target;
     const obj = {
@@ -16,8 +16,9 @@ const ReviewForm = ({ bookId }) => {
       [name]: value,
     };
     setFormData(obj);
+   
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
