@@ -1,22 +1,25 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ReviewCard from "../components/ReviewCard";
 import ReviewForm from "../components/ReviewForm";
+import GlobalContext from "../src/contexts/GlobalContext";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
+  const {setIsLoading} = useContext(GlobalContext)
 
   const navigate = useNavigate();
 
   const fetchMovie = () => {
+    setIsLoading(true)
     axios
       .get(`http://localhost:3000/movies/${id}`)
       .then((resp) => {
         console.log(resp.data);
-        setMovie(resp.data);
+        setIsLoading(false)
       })
       .catch((err) => navigate("Not-Found", { replace: true }));
   };
