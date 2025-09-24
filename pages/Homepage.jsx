@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
-import Loader from "../components/Loader"
-
 
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +10,7 @@ const Homepage = () => {
       .get("http://localhost:3000/movies")
       .then((resp) => {
         setMovies(resp.data);
-        console.log(resp.data);
+        
       })
       .catch((err) => {
         console.log(err);
@@ -23,7 +21,6 @@ const Homepage = () => {
 
   return (
     <div className="container">
-      <Loader/>
       <div className="row">
         <div className="col-12">
           <h2 className="text-center my-3 c-violet fw-bold">Homepage</h2>
