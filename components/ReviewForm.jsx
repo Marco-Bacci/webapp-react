@@ -8,7 +8,7 @@ const ReviewForm = ({ bookId }) => {
     vote: "",
     name: "",
   });
-  
+
   const setFieldValue = (e) => {
     const { name, value } = e.target;
     const obj = {
@@ -16,9 +16,9 @@ const ReviewForm = ({ bookId }) => {
       [name]: value,
     };
     setFormData(obj);
-   
   };
-  
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -34,6 +34,7 @@ const ReviewForm = ({ bookId }) => {
       });
   };
 
+  
   return (
     <div className="container">
       <h3 className="mb-4 text-center c-violet">Aggiungi una recensione</h3>
